@@ -17,20 +17,20 @@ with open("hello.txt", "r", encoding="utf-8") as f:
         print(줄.strip())
 
 #CSV 파일 다루기
-with open("성적.csv", "w", encoding="utf-8") as f:
+with open("성적.csv", "w", encoding="utf-8-sig") as f:
     f.write("이름,국어,영어,수학\n")
     f.write("철수,85,90,78\n")
     f.write("영희,92,88,95\n")
     f.write("민수,78,82,80\n")
 
-with open("성적.csv", "r", encoding="utf-8") as f:
+with open("성적.csv", "r", encoding="utf-8-sig") as f:
     for 줄 in f:
         데이터 = 줄.strip().split(",")
         print(데이터)
 
 
 #각 학생의 평균 계산하기
-with open("성적.csv", "r", encoding="utf-8") as f:
+with open("성적.csv", "r", encoding="utf-8-sig") as f:
     f.readline()
     for 줄 in f:
         데이터 = 줄.strip().split(",")
